@@ -1,0 +1,289 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae5a46bda3295124c99b0e6537ac7252, type: 3}
+  m_Name: Version1
+  m_EditorClassIdentifier: 
+  _clientAccessToken: 3AEO32FRWFRHB32NQPDHDF6C27D4WEC7
+  _appInfo:
+    name: vr_meditation
+    id: 229270723378124
+    lang: en
+    isPrivate: 1
+    createdAt: 2023-07-07T07:41:07-0700
+    trainingStatus: 1
+    lastTrainDuration: 21
+    lastTrainedAt: 2023-07-07T07:53:35-0700
+    nextTrainAt: 2023-07-07T07:53:14-0700
+    intents:
+    - id: 1005828070855877
+      name: choose_backgroundMusic
+      entities:
+      - name: backgroundMusic:backgroundMusic
+        id: 1040837327299745
+    - id: 1202119233812301
+      name: choose_daytime
+      entities:
+      - name: daytime:daytime
+        id: 3491519174393021
+    - id: 818594343119767
+      name: choose_meditationScene
+      entities:
+      - name: meditationScene:meditationScene
+        id: 797902231822273
+    - id: 580281937518985
+      name: choose_meditationVoice
+      entities:
+      - name: meditationVoice:meditationVoice
+        id: 261842143228606
+    - id: 228720800102890
+      name: set_meditationStatus
+      entities:
+      - name: meditationStatus:meditationStatus
+        id: 1081696919466412
+    entities:
+    - name: backgroundMusic
+      id: 705284148024414
+      lookups:
+      - free-text
+      - keywords
+      roles:
+      - name: backgroundMusic
+        id: 1040837327299745
+      keywords:
+      - keyword: music one
+        synonyms:
+        - music one
+        - track one
+      - keyword: music two
+        synonyms:
+        - music two
+        - track two
+    - name: daytime
+      id: 959016061981969
+      lookups:
+      - free-text
+      - keywords
+      roles:
+      - name: daytime
+        id: 3491519174393021
+      keywords:
+      - keyword: day
+        synonyms:
+        - day
+      - keyword: night
+        synonyms:
+        - night
+    - name: meditationScene
+      id: 580813960898611
+      lookups:
+      - free-text
+      - keywords
+      roles:
+      - name: meditationScene
+        id: 797902231822273
+      keywords:
+      - keyword: garden
+        synonyms:
+        - garden
+      - keyword: ocean
+        synonyms:
+        - ocean
+    - name: meditationStatus
+      id: 926402145129874
+      lookups:
+      - free-text
+      - keywords
+      roles:
+      - name: meditationStatus
+        id: 1081696919466412
+      keywords:
+      - keyword: continue
+        synonyms:
+        - continue
+      - keyword: pause
+        synonyms:
+        - pause
+      - keyword: play
+        synonyms:
+        - play
+      - keyword: stop
+        synonyms:
+        - stop
+    - name: meditationVoice
+      id: 242558818533950
+      lookups:
+      - free-text
+      - keywords
+      roles:
+      - name: meditationVoice
+        id: 261842143228606
+      keywords:
+      - keyword: female
+        synonyms:
+        - female
+      - keyword: male
+        synonyms:
+        - male
+    traits: []
+    voices:
+    - name: Cael
+      locale: en_US
+      gender: male
+      styles:
+      - default
+      - soft
+      - formal
+      - fast
+      - projected
+    - name: Cam
+      locale: en_US
+      gender: male
+      styles:
+      - default
+      - soft
+      - formal
+      - fast
+      - projected
+    - name: Carl
+      locale: en_US
+      gender: male
+      styles:
+      - default
+      - soft
+      - formal
+      - fast
+      - projected
+    - name: Charlie
+      locale: en_US
+      gender: male
+      styles:
+      - default
+      - soft
+      - fast
+      - projected
+    - name: Cody
+      locale: en_US
+      gender: male
+      styles:
+      - default
+      - soft
+      - formal
+      - fast
+      - projected
+    - name: Connor
+      locale: en_US
+      gender: male
+      styles:
+      - default
+      - soft
+      - formal
+      - fast
+      - projected
+    - name: Cooper
+      locale: en_US
+      gender: male
+      styles:
+      - default
+      - soft
+      - formal
+      - fast
+      - projected
+    - name: Prospector
+      locale: en_US
+      gender: male
+      styles:
+      - default
+    - name: Railey
+      locale: en_US
+      gender: female
+      styles:
+      - default
+      - soft
+      - formal
+      - fast
+      - projected
+    - name: Rebecca
+      locale: en_US
+      gender: female
+      styles:
+      - default
+      - soft
+      - formal
+      - fast
+      - projected
+    - name: Remi
+      locale: en_US
+      gender: female
+      styles:
+      - default
+      - soft
+      - formal
+      - fast
+      - projected
+    - name: Rubie
+      locale: en_US
+      gender: female
+      styles:
+      - default
+      - soft
+      - formal
+      - fast
+      - projected
+    - name: Vampire
+      locale: en_US
+      gender: male
+      styles:
+      - default
+      - soft
+      - formal
+      - fast
+      - projected
+    - name: Colin
+      locale: en_CA
+      gender: male
+      styles:
+      - default
+      - soft
+      - formal
+      - fast
+      - projected
+    - name: Rosie
+      locale: en_CA
+      gender: female
+      styles:
+      - default
+      - soft
+      - formal
+      - fast
+      - projected
+    composer:
+      canvases: []
+  _configurationId: 33c4dc5d-e440-4924-a8ec-b15f99cbf50e
+  timeoutMS: 10000
+  endpointConfiguration:
+    _uriScheme: 
+    _authority: 
+    _port: 0
+    _witApiVersion: 
+    _message: 
+    _speech: 
+    _dictation: 
+    _synthesize: 
+    _event: 
+    _converse: 
+  isDemoOnly: 0
+  useConduit: 1
+  _manifestLocalPath: ConduitManifest-03cae8d7-80dc-469a-8e9e-16c66c96f8a3.json
+  excludedAssemblies:
+  - Oculus.Voice.Demo, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - Meta.WitAi.Samples, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  relaxedResolution: 0
