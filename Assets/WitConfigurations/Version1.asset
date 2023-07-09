@@ -19,10 +19,10 @@ MonoBehaviour:
     lang: en
     isPrivate: 1
     createdAt: 2023-07-07T07:41:07-0700
-    trainingStatus: 1
+    trainingStatus: 3
     lastTrainDuration: 35
     lastTrainedAt: 2023-07-09T08:26:37-0700
-    nextTrainAt: 2023-07-09T08:26:02-0700
+    nextTrainAt: 2023-07-09T08:57:34-0700
     intents:
     - id: 1005828070855877
       name: choose_backgroundMusic
@@ -67,6 +67,9 @@ MonoBehaviour:
         synonyms:
         - music two
         - track two
+      - keyword: one
+        synonyms:
+        - one
     - name: daytime
       id: 959016061981969
       lookups:
