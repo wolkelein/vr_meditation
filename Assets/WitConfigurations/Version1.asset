@@ -20,9 +20,9 @@ MonoBehaviour:
     isPrivate: 1
     createdAt: 2023-07-07T07:41:07-0700
     trainingStatus: 1
-    lastTrainDuration: 21
-    lastTrainedAt: 2023-07-07T07:53:35-0700
-    nextTrainAt: 2023-07-07T07:53:14-0700
+    lastTrainDuration: 31
+    lastTrainedAt: 2023-07-09T05:31:16-0700
+    nextTrainAt: 2023-07-09T05:30:45-0700
     intents:
     - id: 1005828070855877
       name: choose_backgroundMusic
@@ -91,6 +91,14 @@ MonoBehaviour:
       - name: meditationScene
         id: 797902231822273
       keywords:
+      - keyword: Menu
+        synonyms:
+        - menu
+      - keyword: back
+        synonyms:
+        - back
+        - bec
+        - menu
       - keyword: garden
         synonyms:
         - garden

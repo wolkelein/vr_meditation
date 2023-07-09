@@ -132,7 +132,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 180336280}
-  - component: {fileID: 180336281}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -156,19 +155,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &180336281
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 180336279}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9199c17e79ff2f148b3edf7daeda9ae2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wit: {fileID: 0}
 --- !u!1 &585410238
 GameObject:
   m_ObjectHideFlags: 0
@@ -501,6 +487,7 @@ GameObject:
   - component: {fileID: 1257219128}
   - component: {fileID: 1257219127}
   - component: {fileID: 1257219126}
+  - component: {fileID: 1257219131}
   m_Layer: 0
   m_Name: App Voice Experience
   m_TagString: Untagged
@@ -620,7 +607,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1257219123}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -801,10 +788,82 @@ MonoBehaviour:
   formattedValueEvents: []
   onMultiValueEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1185953882728926934}
+        m_TargetAssemblyTypeName: MeditationEnvironmentHandler, Assembly-CSharp
+        m_MethodName: UpdateMeditationScene
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
   onDidNotMatch:
     m_PersistentCalls:
       m_Calls: []
   onOutOfDomain:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1257219131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257219123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9199c17e79ff2f148b3edf7daeda9ae2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wit: {fileID: 0}
+--- !u!114 &1185953882728926934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185953882728926935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b42d79b7ad51dc45ad71951d47d007e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seaMeditation: {fileID: 7724035910639678030, guid: 43e0f5584d5269e4eb5c11ff68e52c68, type: 3}
+  gardenMeditation: {fileID: 4442033000123474836, guid: a185acc540fa324449a09f4a596ccb72, type: 3}
+  menu: {fileID: 3997202975226998360, guid: d4867b98034cc984ba91c6543c6f651e, type: 3}
+--- !u!1 &1185953882728926935
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1185953882728926937}
+  - component: {fileID: 1185953882728926934}
+  m_Layer: 0
+  m_Name: Meditation Scene Handler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1185953882728926937
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185953882728926935}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -14.199196, y: -1.2262039, z: -14.874207}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
