@@ -9,8 +9,9 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
-/[Ss]dks/
-/[Ee]xternal[Aa]ssets/
+/[Aa]ssets/[Ss]dks/
+/[Aa]ssets/[Ee]xternal[Aa]ssets/
+/[Aa]ssets/[Xx]R/
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
 /[Mm]emoryCaptures/
