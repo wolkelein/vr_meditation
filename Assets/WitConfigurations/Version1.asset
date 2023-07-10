@@ -20,9 +20,9 @@ MonoBehaviour:
     isPrivate: 1
     createdAt: 2023-07-07T07:41:07-0700
     trainingStatus: 1
-    lastTrainDuration: 41
-    lastTrainedAt: 2023-07-10T01:56:44-0700
-    nextTrainAt: 2023-07-10T01:56:03-0700
+    lastTrainDuration: 186
+    lastTrainedAt: 2023-07-10T04:32:39-0700
+    nextTrainAt: 2023-07-10T04:29:33-0700
     intents:
     - id: 1005828070855877
       name: choose_backgroundMusic
