@@ -20,9 +20,9 @@ MonoBehaviour:
     isPrivate: 1
     createdAt: 2023-07-07T07:41:07-0700
     trainingStatus: 1
-    lastTrainDuration: 66
-    lastTrainedAt: 2023-07-09T09:27:57-0700
-    nextTrainAt: 2023-07-09T09:26:51-0700
+    lastTrainDuration: 41
+    lastTrainedAt: 2023-07-10T01:56:44-0700
+    nextTrainAt: 2023-07-10T01:56:03-0700
     intents:
     - id: 1005828070855877
       name: choose_backgroundMusic
@@ -44,6 +44,11 @@ MonoBehaviour:
       entities:
       - name: meditationVoice:meditationVoice
         id: 261842143228606
+    - id: 121610957650801
+      name: fade_Screen
+      entities:
+      - name: fadeScreenStatus:fadeScreenStatus
+        id: 270902568876624
     - id: 228720800102890
       name: set_meditationStatus
       entities:
@@ -85,6 +90,21 @@ MonoBehaviour:
       - keyword: night
         synonyms:
         - night
+    - name: fadeScreenStatus
+      id: 818967299837736
+      lookups:
+      - free-text
+      - keywords
+      roles:
+      - name: fadeScreenStatus
+        id: 270902568876624
+      keywords:
+      - keyword: close
+        synonyms:
+        - close
+      - keyword: open
+        synonyms:
+        - open
     - name: meditationScene
       id: 580813960898611
       lookups:
