@@ -19,10 +19,10 @@ MonoBehaviour:
     lang: en
     isPrivate: 1
     createdAt: 2023-07-07T07:41:07-0700
-    trainingStatus: 1
-    lastTrainDuration: 186
-    lastTrainedAt: 2023-07-10T04:32:39-0700
-    nextTrainAt: 2023-07-10T04:29:33-0700
+    trainingStatus: 3
+    lastTrainDuration: 36
+    lastTrainedAt: 2023-07-20T07:19:01-0700
+    nextTrainAt: 2023-07-20T07:19:18-0700
     intents:
     - id: 1005828070855877
       name: choose_backgroundMusic
@@ -64,17 +64,42 @@ MonoBehaviour:
       - name: backgroundMusic
         id: 1040837327299745
       keywords:
-      - keyword: music one
+      - keyword: Set nothing
         synonyms:
-        - music one
-        - track one
-      - keyword: music two
+        - Set nothing
+        - choose nothing
+        - no music
+      - keyword: Set one
         synonyms:
-        - music two
-        - track two
-      - keyword: one
+        - choose first one
+        - choose one
+        - choose track one
+        - set one
+      - keyword: Set two
         synonyms:
-        - one
+        - choose second one
+        - choose to
+        - choose too
+        - choose track to
+        - choose track two
+        - choose two
+        - set second one
+        - set to
+        - set too
+        - set two
+      - keyword: Try one
+        synonyms:
+        - try first one
+        - try one
+        - try track one
+      - keyword: Try two
+        synonyms:
+        - trai too
+        - tri-second one
+        - try second one
+        - try too
+        - try track two
+        - try two
     - name: daytime
       id: 959016061981969
       lookups:
@@ -122,6 +147,9 @@ MonoBehaviour:
         - back
         - bec
         - menu
+      - keyword: beach
+        synonyms:
+        - beach
       - keyword: garden
         synonyms:
         - garden

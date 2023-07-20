@@ -30,12 +30,10 @@ public class FadeController : MonoBehaviour
         if (GameObject.Find("OceanScene(Clone)") != null)
         {
             meditationScene = GameObject.Find("OceanScene(Clone)");
-            Debug.Log("meditation Scene = ocean Scene");
         }
         else if (GameObject.Find("GardenScene(Clone)") != null)
         {
             meditationScene = GameObject.Find("GardenScene(Clone)");
-            Debug.Log("meditation Scene = garden Scene");
         }
 
         if (fadeToBlack)
