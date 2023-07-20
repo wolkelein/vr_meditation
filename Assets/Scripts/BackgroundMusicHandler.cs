@@ -14,11 +14,14 @@ public class BackgroundMusicHandler : MonoBehaviour
     private GameObject backgroundMusic;
     private AudioSource backgroundAudioSource;
 
+    private GameObject MeditationMenu;
+
     // Start is called before the first frame update
     void Start()
     {
         backgroundMusic = GameObject.Find("Background Audio");
         backgroundAudioSource = backgroundMusic.GetComponent<AudioSource>();
+        MeditationMenu = GameObject.Find("Meditation Menu Handler");
     }
 
     IEnumerator BackgroundMusicTrial()
@@ -49,15 +52,18 @@ public class BackgroundMusicHandler : MonoBehaviour
             {
                 backgroundAudioSource.clip = backgroundMusic1;
                 backgroundAudioSource.Play();
+                MeditationMenu.GetComponent<MeditationMenuHandler>().ChangeToSetupMenu2();
             }
             else if (sceneString == "Set two")
             {
                 backgroundAudioSource.clip = backgroundMusic2;
                 backgroundAudioSource.Play();
+                MeditationMenu.GetComponent<MeditationMenuHandler>().ChangeToSetupMenu2();
             }
             else if (sceneString == "Set nothing")
             {
                 backgroundAudioSource.Stop();
+                MeditationMenu.GetComponent<MeditationMenuHandler>().ChangeToSetupMenu2();
             }
         }
     }

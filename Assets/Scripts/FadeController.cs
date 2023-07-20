@@ -17,9 +17,6 @@ public class FadeController : MonoBehaviour
     private const float fadeSpeed = 1f;
 
     private GameObject meditationScene;
-    private GameObject environment;
-
-    //private Renderer
 
     private void Start()
     {
