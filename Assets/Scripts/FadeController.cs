@@ -16,8 +16,28 @@ public class FadeController : MonoBehaviour
 
     private const float fadeSpeed = 1f;
 
+    private GameObject meditationScene;
+    private GameObject environment;
+
+    //private Renderer
+
+    private void Start()
+    {
+    }
+
     private void Update()
     {
+        if (GameObject.Find("OceanScene(Clone)") != null)
+        {
+            meditationScene = GameObject.Find("OceanScene(Clone)");
+            Debug.Log("meditation Scene = ocean Scene");
+        }
+        else if (GameObject.Find("GardenScene(Clone)") != null)
+        {
+            meditationScene = GameObject.Find("GardenScene(Clone)");
+            Debug.Log("meditation Scene = garden Scene");
+        }
+
         if (fadeToBlack)
         {
             fadeCanvas.alpha += fadeSpeed * Time.deltaTime;
@@ -50,10 +70,12 @@ public class FadeController : MonoBehaviour
             if (sceneString == "close")
             {
                 fadeToBlack = true;
+                meditationScene.SetActive(false);
             }
             else if (sceneString == "open")
             {
                 fadeToTransparent = true;
+                meditationScene.SetActive(true);
             }
         }
     }
