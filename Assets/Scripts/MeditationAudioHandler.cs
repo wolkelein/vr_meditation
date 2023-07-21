@@ -8,11 +8,13 @@ public class MeditationAudioHandler : MonoBehaviour
 {
     private GameObject meditationAudio;
     private AudioSource meditationAudioSource;
+    private GameObject MeditationMenu;
 
     private void Start()
     {
         meditationAudio = GameObject.Find("Meditation Voice Audio 2");
         meditationAudioSource = meditationAudio.GetComponent<AudioSource>();
+        MeditationMenu = GameObject.Find("Meditation Menu Handler");
     }
     public void PlayMeditation(string[] values)
     {
@@ -25,6 +27,7 @@ public class MeditationAudioHandler : MonoBehaviour
             if (sceneString == "start" || sceneString == "Start" || sceneString == "play")
             {
                 meditationAudioSource.Play();
+                MeditationMenu.GetComponent<MeditationMenuHandler>().ExitMenu();
             }
             else if (sceneString == "pause")
             {

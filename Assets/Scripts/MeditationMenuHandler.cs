@@ -5,6 +5,8 @@ using UnityEngine;
 public class MeditationMenuHandler : MonoBehaviour
 {
     [SerializeField]
+    private GameObject MenuBackgroundImage;
+    [SerializeField]
     private GameObject WelcomeText;
     [SerializeField]
     private GameObject SetupMenu1;
@@ -50,5 +52,16 @@ public class MeditationMenuHandler : MonoBehaviour
     {
         SetupMenu4.SetActive(false);
         SetupMenu5.SetActive(true);
+    }
+
+    public void ExitMenu()
+    {
+        MenuBackgroundImage.SetActive(false);
+        WelcomeText.SetActive(false);
+        SetupMenu1.SetActive(false);
+        SetupMenu2.SetActive(false);
+        SetupMenu3.SetActive(false);
+        SetupMenu4.SetActive(false);
+        SetupMenu5.SetActive(false);
     }
 }
