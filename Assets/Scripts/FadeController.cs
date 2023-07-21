@@ -18,9 +18,21 @@ public class FadeController : MonoBehaviour
 
     private GameObject activeScene;
 
+    private GameObject meditationAudio;
+    private AudioSource meditationAudioSource;
+
     private void Start()
     {
         activeScene = GameObject.Find("Meditation Scene Handler");
+        meditationAudio = GameObject.Find("Meditation Voice Audio 2");
+        meditationAudioSource = meditationAudio.GetComponent<AudioSource>();
+    }
+
+    IEnumerator PauseMeditationAudio()
+    {
+        meditationAudioSource.Pause();
+        yield return new WaitForSeconds(5);
+        meditationAudioSource.UnPause();
     }
 
     private void Update()
@@ -60,6 +72,7 @@ public class FadeController : MonoBehaviour
             }
             else if (sceneString == "open")
             {
+                StartCoroutine(PauseMeditationAudio());
                 fadeToTransparent = true;
                 activeScene.GetComponent<MeditationEnvironmentHandler>().ActivateScene();
             }
