@@ -856,7 +856,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Voice: {fileID: 1257219124}
   ValidateEarly: 0
-  intent: 
+  intent: choose_meditationVoice
   confidenceThreshold: 0.6
   valueMatchers:
   - path: entities.meditationVoice:meditationVoice[0].value

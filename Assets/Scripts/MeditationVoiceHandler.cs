@@ -20,9 +20,12 @@ public class MeditationVoiceHandler : MonoBehaviour
 
     private AudioSource meditationAudioSource;
 
+    private GameObject MeditationMenu;
+
     private void Start()
     {
         meditationAudioSource = GameObject.Find("Meditation Voice Audio 2").GetComponent<AudioSource>();
+        MeditationMenu = GameObject.Find("Meditation Menu Handler");
     }
     public void SetMeditationVoice(string[] values)
     {
@@ -42,6 +45,7 @@ public class MeditationVoiceHandler : MonoBehaviour
                 {
                     meditationAudioSource.clip = femaleGardenAudio;
                 }
+                MeditationMenu.GetComponent<MeditationMenuHandler>().ChangeToSetupMenu4();
             }
             if (sceneString == "male")
             {
@@ -53,6 +57,7 @@ public class MeditationVoiceHandler : MonoBehaviour
                 {
                     meditationAudioSource.clip = maleGardenAudio;
                 }
+                MeditationMenu.GetComponent<MeditationMenuHandler>().ChangeToSetupMenu4();
             }
         }
     }

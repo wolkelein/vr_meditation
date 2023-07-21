@@ -12,12 +12,16 @@ public class MeditationMenuHandler : MonoBehaviour
     private GameObject SetupMenu2;
     [SerializeField]
     private GameObject SetupMenu3;
+    [SerializeField]
+    private GameObject SetupMenu4;
+
 
     // Start is called before the first frame update
     void Start()
     {
         SetupMenu2.SetActive(false);
         SetupMenu3.SetActive(false);
+        SetupMenu4.SetActive(false);
     }
 
    public void ChangeToSetupMenu2()
@@ -31,5 +35,11 @@ public class MeditationMenuHandler : MonoBehaviour
     {
         SetupMenu2.SetActive(false);
         SetupMenu3.SetActive(true);
+    }
+
+    public void ChangeToSetupMenu4()
+    {
+        SetupMenu3.SetActive(false);
+        SetupMenu4.SetActive(true);
     }
 }
