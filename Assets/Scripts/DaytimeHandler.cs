@@ -11,10 +11,12 @@ public class DaytimeHandler : MonoBehaviour
     [SerializeField]
     Material night;
 
+    private GameObject MeditationMenu;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        MeditationMenu = GameObject.Find("Meditation Menu Handler");
     }
  
     public void ChooseDaytime(string[] values)
@@ -28,10 +30,12 @@ public class DaytimeHandler : MonoBehaviour
             if (daytimeString == "day" || daytimeString == "Day")
             {
                 RenderSettings.skybox = day;
+                MeditationMenu.GetComponent<MeditationMenuHandler>().ChangeToSetupMenu5();
             }
             else if (daytimeString == "night" || daytimeString == "Night")
             {
                 RenderSettings.skybox = night;
+                MeditationMenu.GetComponent<MeditationMenuHandler>().ChangeToSetupMenu5();
             }
         }
 
