@@ -16,8 +16,6 @@ public class FadeController : MonoBehaviour
 
     private const float fadeSpeed = 1f;
 
-    private GameObject meditationScene;
-
     private GameObject activeScene;
 
     private void Start()
@@ -27,8 +25,6 @@ public class FadeController : MonoBehaviour
 
     private void Update()
     {
-        activeScene.GetComponent<MeditationEnvironmentHandler>().ShowActiveScene();
-
         if (fadeToBlack)
         {
             fadeCanvas.alpha += fadeSpeed * Time.deltaTime;

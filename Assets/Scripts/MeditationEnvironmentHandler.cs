@@ -18,6 +18,8 @@ public class MeditationEnvironmentHandler : MonoBehaviour
 
     private GameObject MeditationMenu;
 
+    private string scene;
+
     private void Start()
     {
         activeScene = menu;
@@ -61,10 +63,9 @@ public class MeditationEnvironmentHandler : MonoBehaviour
             }
         }
     }
-    public void ShowActiveScene()
+    public string ShowActiveScene()
     {
-        string scene = activeScene.name;
-        Debug.Log(scene);
+       return scene = activeScene.name;
     }
 
     public void ActivateScene()

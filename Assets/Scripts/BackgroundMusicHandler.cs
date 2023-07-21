@@ -31,7 +31,7 @@ public class BackgroundMusicHandler : MonoBehaviour
         backgroundAudioSource.Stop();
     }
 
-        public void UpdateBackgroundAudio(string[] values)
+    public void UpdateBackgroundAudio(string[] values)
     {
         var sceneString = values[0];
 

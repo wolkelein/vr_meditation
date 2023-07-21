@@ -45,25 +45,33 @@ public class MeditationVoiceHandler : MonoBehaviour
             // Check the value of sceneString and switch scenes accordingly
             if (sceneString == "female")
             {
-                if (activeScene.name=="OceanScene(Clone)")
+                if (activeScene.GetComponent<MeditationEnvironmentHandler>().ShowActiveScene() == "OceanScene(Clone)")
                 {
                     meditationAudioSource.clip = femaleOceanAudio;
                 }
-                else if (activeScene.name == "GardenScene(Clone)")
+                else if (activeScene.GetComponent<MeditationEnvironmentHandler>().ShowActiveScene() == "GardenScene(Clone)")
                 {
                     meditationAudioSource.clip = femaleGardenAudio;
                 }
+                else
+                {
+                    Debug.LogWarning("Scene name not recognized.");
+                }
                 MeditationMenu.GetComponent<MeditationMenuHandler>().ChangeToSetupMenu4();
             }
-            if (sceneString == "male")
+            else if (sceneString == "male")
             {
-                if (activeScene.name == "OceanScene(Clone)")
+                if (activeScene.GetComponent<MeditationEnvironmentHandler>().ShowActiveScene() == "OceanScene(Clone)")
                 {
                     meditationAudioSource.clip = maleOceanAudio;
                 }
-                else if (activeScene.name == "GardenScene(Clone)")
+                else if (activeScene.GetComponent<MeditationEnvironmentHandler>().ShowActiveScene() == "GardenScene(Clone)")
                 {
                     meditationAudioSource.clip = maleGardenAudio;
+                }
+                else
+                {
+                    Debug.LogWarning("Scene name not recognized.");
                 }
                 MeditationMenu.GetComponent<MeditationMenuHandler>().ChangeToSetupMenu4();
             }
