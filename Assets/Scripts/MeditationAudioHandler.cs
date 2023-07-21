@@ -9,6 +9,7 @@ public class MeditationAudioHandler : MonoBehaviour
     private GameObject meditationAudio;
     private AudioSource meditationAudioSource;
     private GameObject MeditationMenu;
+    
 
     private void Start()
     {
@@ -16,6 +17,7 @@ public class MeditationAudioHandler : MonoBehaviour
         meditationAudioSource = meditationAudio.GetComponent<AudioSource>();
         MeditationMenu = GameObject.Find("Meditation Menu Handler");
     }
+
     public void PlayMeditation(string[] values)
     {
         var sceneString = values[0];

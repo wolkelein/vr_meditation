@@ -16,25 +16,11 @@ public class MeditationEnvironmentHandler : MonoBehaviour
 
     private GameObject activeScene;
 
-    [SerializeField]
-    private AudioClip seaAudioVoice;
-
-    [SerializeField]
-    private AudioClip gardenAudioVoice;
-
-    [SerializeField]
-    private AudioClip menuAudioVoice;
-
-    private GameObject meditationAudio;
-    private AudioSource meditationAudioSource;
-
     private GameObject MeditationMenu;
 
     private void Start()
     {
         activeScene = menu;
-        //meditationAudio = GameObject.Find("Meditation Voice Audio");
-        //meditationAudioSource = meditationAudio.GetComponent<AudioSource>();
         MeditationMenu = GameObject.Find("Meditation Menu Handler");
     }
 
@@ -56,26 +42,33 @@ public class MeditationEnvironmentHandler : MonoBehaviour
             {
                 GameObject.Destroy(activeScene);
                 activeScene = Instantiate(seaMeditation, new Vector3(0, 0, 0), Quaternion.identity);
-                //meditationAudioSource.clip = seaAudioVoice;
                 MeditationMenu.GetComponent<MeditationMenuHandler>().ChangeToSetupMenu3();
+                activeScene.SetActive(false);
             }
             else if (sceneString == "garden" || sceneString == "nature")
             {
                 GameObject.Destroy(activeScene);
                 activeScene = Instantiate(gardenMeditation, new Vector3(0, 0, 0), Quaternion.identity);
-                //meditationAudioSource.clip = gardenAudioVoice;
                 MeditationMenu.GetComponent<MeditationMenuHandler>().ChangeToSetupMenu3();
-                
-                //new Vector3(-1858, -18, -288)
+                activeScene.SetActive(false);
             }
             else if (sceneString == "menu" || sceneString == "back" || sceneString == "home")
             {
                 GameObject.Destroy(activeScene);
                 activeScene = Instantiate(menu, new Vector3(0, 0, 0), Quaternion.identity);
-                //meditationAudioSource.clip = menuAudioVoice;
                 MeditationMenu.GetComponent<MeditationMenuHandler>().ChangeToSetupMenu3();
-                
+                activeScene.SetActive(false);
             }
         }
+    }
+    public void ShowActiveScene()
+    {
+        string scene = activeScene.name;
+        Debug.Log(scene);
+    }
+
+    public void ActivateScene()
+    {
+        activeScene.SetActive(true);
     }
 }

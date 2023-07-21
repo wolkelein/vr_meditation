@@ -22,10 +22,18 @@ public class MeditationVoiceHandler : MonoBehaviour
 
     private GameObject MeditationMenu;
 
+    private GameObject activeScene;
+
     private void Start()
     {
         meditationAudioSource = GameObject.Find("Meditation Voice Audio 2").GetComponent<AudioSource>();
         MeditationMenu = GameObject.Find("Meditation Menu Handler");
+        activeScene = GameObject.Find("Meditation Scene Handler");
+    }
+
+    public void Update()
+    {
+        activeScene.GetComponent<MeditationEnvironmentHandler>().ShowActiveScene();
     }
     public void SetMeditationVoice(string[] values)
     {
@@ -37,11 +45,11 @@ public class MeditationVoiceHandler : MonoBehaviour
             // Check the value of sceneString and switch scenes accordingly
             if (sceneString == "female")
             {
-                if (GameObject.Find("OceanScene(Clone)") != null)
+                if (activeScene.name=="OceanScene(Clone)")
                 {
                     meditationAudioSource.clip = femaleOceanAudio;
                 }
-                else if (GameObject.Find("GardenScene(Clone)") != null)
+                else if (activeScene.name == "GardenScene(Clone)")
                 {
                     meditationAudioSource.clip = femaleGardenAudio;
                 }
@@ -49,11 +57,11 @@ public class MeditationVoiceHandler : MonoBehaviour
             }
             if (sceneString == "male")
             {
-                if (GameObject.Find("OceanScene(Clone)") != null)
+                if (activeScene.name == "OceanScene(Clone)")
                 {
                     meditationAudioSource.clip = maleOceanAudio;
                 }
-                else if (GameObject.Find("GardenScene(Clone)") != null)
+                else if (activeScene.name == "GardenScene(Clone)")
                 {
                     meditationAudioSource.clip = maleGardenAudio;
                 }

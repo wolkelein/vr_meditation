@@ -18,20 +18,16 @@ public class FadeController : MonoBehaviour
 
     private GameObject meditationScene;
 
+    private GameObject activeScene;
+
     private void Start()
     {
+        activeScene = GameObject.Find("Meditation Scene Handler");
     }
 
     private void Update()
     {
-        if (GameObject.Find("OceanScene(Clone)") != null)
-        {
-            meditationScene = GameObject.Find("OceanScene(Clone)");
-        }
-        else if (GameObject.Find("GardenScene(Clone)") != null)
-        {
-            meditationScene = GameObject.Find("GardenScene(Clone)");
-        }
+        activeScene.GetComponent<MeditationEnvironmentHandler>().ShowActiveScene();
 
         if (fadeToBlack)
         {
@@ -65,12 +61,11 @@ public class FadeController : MonoBehaviour
             if (sceneString == "close")
             {
                 fadeToBlack = true;
-                meditationScene.SetActive(false);
             }
             else if (sceneString == "open")
             {
                 fadeToTransparent = true;
-                meditationScene.SetActive(true);
+                activeScene.GetComponent<MeditationEnvironmentHandler>().ActivateScene();
             }
         }
     }
