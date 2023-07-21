@@ -11,7 +11,7 @@ public class MeditationAudioHandler : MonoBehaviour
 
     private void Start()
     {
-        meditationAudio = GameObject.Find("Meditation Voice Audio");
+        meditationAudio = GameObject.Find("Meditation Voice Audio 2");
         meditationAudioSource = meditationAudio.GetComponent<AudioSource>();
     }
     public void PlayMeditation(string[] values)
@@ -25,22 +25,18 @@ public class MeditationAudioHandler : MonoBehaviour
             if (sceneString == "start" || sceneString == "Start" || sceneString == "play")
             {
                 meditationAudioSource.Play();
-                Debug.Log("Playing audio");
             }
             else if (sceneString == "pause")
             {
                 meditationAudioSource.Pause();
-                Debug.Log("Pausing audio");
             }
             else if (sceneString == "continue")
             {
                 meditationAudioSource.UnPause();
-                Debug.Log("Continuing audio");
             }
             else if (sceneString == "stop")
             {
                 meditationAudioSource.Stop();
-                Debug.Log("Stopping audio");
             }
         }
     }
