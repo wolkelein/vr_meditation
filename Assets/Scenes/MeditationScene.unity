@@ -150,7 +150,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 13979206}
   m_LocalRotation: {x: 0, y: 0.7071068, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: -45}
+  m_LocalPosition: {x: 0, y: 0, z: -41}
   m_LocalScale: {x: 0.10963513, y: 0.10963513, z: 0.10963513}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -164,7 +164,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -257, y: 131}
+  m_AnchoredPosition: {x: -159, y: 131}
   m_SizeDelta: {x: 800, y: 1053.2213}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &13979208
@@ -2790,15 +2790,16 @@ MonoBehaviour:
   m_text: "Welcome to your meditation experience. You can enjoy this meditation completely
     hands free \u2013 it is controlled solely by your voice. I will guide you through
     setting up your meditation. If at any point during the meditation you need help,
-    just turn your head a bit left and take a look at the question mark for a count
-    of 5, then a help menu will pop up. Now let\u2019s get this meditation started.\r\n\nFirst,
-    let's choose some background music. \n\n\rYou have two different tracks to choose
-    from, or, if you like that better, you can choose to meditate without background
-    music. Let's have a quick listen to the first track. To do that, say \"try first
-    one\". Did you like that? Well, let's listen to the second track by saying \"try
-    second one\". \n\nNow that you've listened to both tracks, you can decide which
-    track you liked better or if you don't want any background music at all. To do
-    so, say \"Choose first one\", \"Choose second one\" or \"Choose nothing\". \n"
+    just turn your head a bit left and take a look at the question mark until it
+    turns pink, then a help menu will pop up. Now let\u2019s get this meditation
+    started.\r\n\nFirst, let's choose some background music. \n\n\rYou have two different
+    tracks to choose from, or, if you like that better, you can choose to meditate
+    without background music. Let's have a quick listen to the first track. To do
+    that, say \"try first one\". Did you like that? Well, let's listen to the second
+    track by saying \"try second one\". \n\nNow that you've listened to both tracks,
+    you can decide which track you liked better or if you don't want any background
+    music at all. To do so, say \"Choose first one\", \"Choose second one\" or \"Choose
+    nothing\". \n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d4dd8ac03f39dca4e8ebabee6d98cd4d, type: 2}
   m_sharedMaterial: {fileID: -7226472764874511880, guid: d4dd8ac03f39dca4e8ebabee6d98cd4d, type: 2}
@@ -3282,7 +3283,7 @@ MonoBehaviour:
 
 
     To choose the beach meditation, say
-    "Ocean" and to choose the garden meditation, say "Garden.
+    "Ocean" and to choose the garden meditation, say "Garden".
 
 '
   m_isRightToLeft: 0
@@ -3670,7 +3671,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6066809107426202493}
   m_LocalRotation: {x: 0, y: -0.8699257, z: 0, w: 0.4931829}
-  m_LocalPosition: {x: -245, y: 0, z: -35}
+  m_LocalPosition: {x: -147, y: 0, z: -31}
   m_LocalScale: {x: 85.93001, y: 85.93, z: 85.93001}
   m_ConstrainProportionsScale: 0
   m_Children: []

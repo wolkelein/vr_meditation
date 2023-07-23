@@ -42,6 +42,7 @@ public class MeditationAudioHandler : MonoBehaviour
             else if (sceneString == "stop")
             {
                 meditationAudioSource.Stop();
+                MeditationMenu.GetComponent<MeditationMenuHandler>().ActivateSetUpMenu();
             }
         }
     }

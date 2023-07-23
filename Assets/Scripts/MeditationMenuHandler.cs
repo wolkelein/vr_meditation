@@ -54,6 +54,30 @@ public class MeditationMenuHandler : MonoBehaviour
         StartMenuActive = true;
     }
 
+   public void ActivateSetUpMenu()
+    {
+        WelcomeText.SetActive(true);
+        SetupMenu1.SetActive(true);
+        MenuBackgroundImage.SetActive(true);
+        StartMenuActive = true;
+
+        if (SetupMenu2.activeSelf == true)
+        {
+            SetupMenu2.SetActive(false);
+        }
+        else if (SetupMenu3.activeSelf == true)
+        {
+            SetupMenu3.SetActive(false);
+        }
+        else if (SetupMenu4.activeSelf == true)
+        {
+            SetupMenu4.SetActive(false);
+        }
+        else if (SetupMenu5.activeSelf == true)
+        {
+            SetupMenu5.SetActive(false);
+        }
+    }
    public void ChangeToSetupMenu2()
     {
         if (HelpMenuActive == false)
