@@ -41,22 +41,26 @@ public class BackgroundMusicHandler : MonoBehaviour
             if (sceneString == "Try one")
             {
                 backgroundAudioSource.clip = backgroundMusic1;
+                backgroundAudioSource.volume = 0.5f;
                 StartCoroutine(BackgroundMusicTrial());
             }
             else if (sceneString == "Try two")
             {
                 backgroundAudioSource.clip = backgroundMusic2;
+                backgroundAudioSource.volume = 0.083f;
                 StartCoroutine(BackgroundMusicTrial());
             }
             else if (sceneString == "Set one")
             {
                 backgroundAudioSource.clip = backgroundMusic1;
+                backgroundAudioSource.volume = 0.5f;
                 backgroundAudioSource.Play();
                 MeditationMenu.GetComponent<MeditationMenuHandler>().ChangeToSetupMenu2();
             }
             else if (sceneString == "Set two")
             {
                 backgroundAudioSource.clip = backgroundMusic2;
+                backgroundAudioSource.volume = 0.083f;
                 backgroundAudioSource.Play();
                 MeditationMenu.GetComponent<MeditationMenuHandler>().ChangeToSetupMenu2();
             }
