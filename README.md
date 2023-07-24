@@ -6,8 +6,6 @@ Hush is first and foremost a meditation. To make the viewer more present in the 
 ## How was it made?
 Hush was made in Unity 2023.3.23f1. It makes use of the Google Cardboard XR Plugin (https://developers.google.com/cardboard/develop/unity/quickstart) as well as the Oculus Voice SDK (https://developer.oculus.com/documentation/unity/voice-sdk-overview/). 
 
-## Content of the repository
-
 ## SDKs   
 The project is set to build for Android, so you need to have downloaded the Android SDK for Unity either during installation or after installation through the unity hub.
 
@@ -26,8 +24,6 @@ https://assetstore.unity.com/packages/3d/characters/animals/simple-boids-flocks-
 For the meditation scenes, the following Asset Packs were used:
 https://assetstore.unity.com/packages/3d/environments/fantasy/fantasy-forest-environment-free-demo-35361 &
 https://assetstore.unity.com/packages/3d/props/exterior/polygon-prototype-low-poly-3d-art-by-synty-137126
-
-## Overview of Build Settings
 
 ## Relevant Docus
 To become more familiar with the Oculus Voice SDK, the following tutorial covers the functionality quite well (it was made for the experimental Wit SDK and not the Voice SDK, but with a little bit of thinking it can easily be applied to the Voice SDK, since it works in basically the same way, just with different names): https://github.com/wit-ai/wit-unity/blob/main/Tutorials/ShapesTutorial.md
