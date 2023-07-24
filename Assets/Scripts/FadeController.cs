@@ -21,11 +21,14 @@ public class FadeController : MonoBehaviour
     private GameObject meditationAudio;
     private AudioSource meditationAudioSource;
 
+    private GameObject MeditationMenu;
+
     private void Start()
     {
         activeScene = GameObject.Find("Meditation Scene Handler");
         meditationAudio = GameObject.Find("Meditation Voice Audio 2");
         meditationAudioSource = meditationAudio.GetComponent<AudioSource>();
+        MeditationMenu = GameObject.Find("Meditation Menu Handler");
     }
 
     IEnumerator PauseMeditationAudio()
@@ -69,6 +72,7 @@ public class FadeController : MonoBehaviour
             if (sceneString == "close")
             {
                 fadeToBlack = true;
+                MeditationMenu.GetComponent<MeditationMenuHandler>().CloseAllSetupMenus();
             }
             else if (sceneString == "open")
             {

@@ -23,7 +23,6 @@ public class IslandRaycastHandler: MonoBehaviour
 
     IEnumerator FlyBirds()
     {
-        yield return new WaitForSeconds(2);
         meditationAudioSource.Pause();
         birdflock.SetActive(true);
         yield return new WaitForSeconds(3);
@@ -32,7 +31,6 @@ public class IslandRaycastHandler: MonoBehaviour
     }
     IEnumerator FlyBirds2()
     {
-        yield return new WaitForSeconds(2);
         meditationAudioSource.Pause();
         birdflock2.SetActive(true);
         yield return new WaitForSeconds(3);
@@ -71,7 +69,6 @@ public class IslandRaycastHandler: MonoBehaviour
             // Check the value of sceneString and switch scenes accordingly
             if (sceneString == "focus")
             {
-                Debug.Log("Focus detected");
                 focusDetected = true;
             }
   

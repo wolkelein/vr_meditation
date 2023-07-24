@@ -35,7 +35,7 @@ public class MeditationMenuHandler : MonoBehaviour
 
     private bool StartMenuActive;
 
-    private void CloseAllSetupMenus()
+    public void CloseAllSetupMenus()
     {
         if (MenuBackgroundImage.activeSelf == true)
         {
@@ -155,7 +155,7 @@ public class MeditationMenuHandler : MonoBehaviour
         //SetupMenu2.SetActive(false);
         //SetupMenu3.SetActive(false);
         //SetupMenu4.SetActive(false);
-        //SetupMenu5.SetActive(false);
+        SetupMenu5.SetActive(false);
         StartMenuActive = false;
     }
 
