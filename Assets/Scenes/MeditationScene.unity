@@ -123,6 +123,71 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &1530410
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2785017829347912210, guid: a185acc540fa324449a09f4a596ccb72, type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 2785017829347912210, guid: a185acc540fa324449a09f4a596ccb72, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2785017829347912210, guid: a185acc540fa324449a09f4a596ccb72, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2785017829347912210, guid: a185acc540fa324449a09f4a596ccb72, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2785017829347912210, guid: a185acc540fa324449a09f4a596ccb72, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2785017829347912210, guid: a185acc540fa324449a09f4a596ccb72, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2785017829347912210, guid: a185acc540fa324449a09f4a596ccb72, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2785017829347912210, guid: a185acc540fa324449a09f4a596ccb72, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2785017829347912210, guid: a185acc540fa324449a09f4a596ccb72, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2785017829347912210, guid: a185acc540fa324449a09f4a596ccb72, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2785017829347912210, guid: a185acc540fa324449a09f4a596ccb72, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846070179157282007, guid: a185acc540fa324449a09f4a596ccb72, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846070179157282007, guid: a185acc540fa324449a09f4a596ccb72, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -8.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442033000123474836, guid: a185acc540fa324449a09f4a596ccb72, type: 3}
+      propertyPath: m_Name
+      value: GardenScene
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a185acc540fa324449a09f4a596ccb72, type: 3}
 --- !u!1 &40919614
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,8 +354,8 @@ MonoBehaviour:
   m_text: Do you want your meditation read by a man or a woman. For a female voice
     say "female" and for a male voice say "male".
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d4dd8ac03f39dca4e8ebabee6d98cd4d, type: 2}
-  m_sharedMaterial: {fileID: -7226472764874511880, guid: d4dd8ac03f39dca4e8ebabee6d98cd4d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -514,7 +579,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -323.24402, y: 0}
+  m_AnchoredPosition: {x: -323.24408, y: 0}
   m_SizeDelta: {x: -213.3335, y: -120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &207615906
@@ -596,8 +661,8 @@ MonoBehaviour:
   m_text: If you want to switch to a daytime meditation, say "choose day". If you
     want a nighttime meditation, say "choose night".
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d4dd8ac03f39dca4e8ebabee6d98cd4d, type: 2}
-  m_sharedMaterial: {fileID: -7226472764874511880, guid: d4dd8ac03f39dca4e8ebabee6d98cd4d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1077,8 +1142,8 @@ MonoBehaviour:
     wish to end your meditation, just say "Stop my meditation" and you will be brought
     back to the start screen as well.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d4dd8ac03f39dca4e8ebabee6d98cd4d, type: 2}
-  m_sharedMaterial: {fileID: -7226472764874511880, guid: d4dd8ac03f39dca4e8ebabee6d98cd4d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1786,8 +1851,8 @@ MonoBehaviour:
     the day or during the night. If you want a daytime meditation, say "choose day".
     If you want a nighttime meditation, say "choose night".
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d4dd8ac03f39dca4e8ebabee6d98cd4d, type: 2}
-  m_sharedMaterial: {fileID: -7226472764874511880, guid: d4dd8ac03f39dca4e8ebabee6d98cd4d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2158,7 +2223,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.015445553, z: 0, w: 0.99988073}
   m_LocalPosition: {x: 0.01, y: 1, z: -10.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2167,7 +2232,7 @@ Transform:
   - {fileID: 229286444}
   m_Father: {fileID: 180336280}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 1.77, z: 0}
 --- !u!114 &963194229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2295,8 +2360,8 @@ MonoBehaviour:
     read by a man or a woman. For a female voice say \"female\" and for a male voice
     say \"male\"."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d4dd8ac03f39dca4e8ebabee6d98cd4d, type: 2}
-  m_sharedMaterial: {fileID: -7226472764874511880, guid: d4dd8ac03f39dca4e8ebabee6d98cd4d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2487,8 +2552,8 @@ MonoBehaviour:
   m_text: Do you want to switch to the beach or the garden meditation? To choose
     the beach meditation, say "Ocean" and to choose the garden meditation, say "Garden".
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d4dd8ac03f39dca4e8ebabee6d98cd4d, type: 2}
-  m_sharedMaterial: {fileID: -7226472764874511880, guid: d4dd8ac03f39dca4e8ebabee6d98cd4d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2873,7 +2938,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -53.44, y: 246}
+  m_AnchoredPosition: {x: -53.44, y: 274.63}
   m_SizeDelta: {x: 1183.9, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1262721159
@@ -2910,8 +2975,8 @@ MonoBehaviour:
     music at all. To do so, say \"Choose first one\", \"Choose second one\" or \"Choose
     nothing\". \n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d4dd8ac03f39dca4e8ebabee6d98cd4d, type: 2}
-  m_sharedMaterial: {fileID: -7226472764874511880, guid: d4dd8ac03f39dca4e8ebabee6d98cd4d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3375,7 +3440,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -323.24402, y: 0}
+  m_AnchoredPosition: {x: -323.24408, y: 0}
   m_SizeDelta: {x: -213.3335, y: -120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1577749885
@@ -3482,8 +3547,8 @@ MonoBehaviour:
     change, say "Exit help menu" to get back to your meditation and obviously restart
     it by saying "Start my meditation".
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d4dd8ac03f39dca4e8ebabee6d98cd4d, type: 2}
-  m_sharedMaterial: {fileID: -7226472764874511880, guid: d4dd8ac03f39dca4e8ebabee6d98cd4d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3766,8 +3831,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d4dd8ac03f39dca4e8ebabee6d98cd4d, type: 2}
-  m_sharedMaterial: {fileID: -7226472764874511880, guid: d4dd8ac03f39dca4e8ebabee6d98cd4d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3987,10 +4052,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 911d51a59680ffb41869a80de9b2e057, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  femaleOceanAudio: {fileID: 8300000, guid: a36b13c39dc52df48ba073870f7860ca, type: 3}
-  maleOceanAudio: {fileID: 8300000, guid: 9020e5e83a5d7c548a82b41fabdeee5d, type: 3}
-  femaleGardenAudio: {fileID: 8300000, guid: a147df600f9641c4a9182c000e887af6, type: 3}
-  maleGardenAudio: {fileID: 8300000, guid: 3a75cd4c10271eb4fa30f51e2ea5f106, type: 3}
+  femaleOceanAudio: {fileID: 8300000, guid: 16a5e6d12f558d34189e1e00a2b6ec9c, type: 3}
+  maleOceanAudio: {fileID: 8300000, guid: d3f636b9801d83c4e908d2a295175f81, type: 3}
+  femaleGardenAudio: {fileID: 8300000, guid: 1abb373f8531581428524a86b7ebd64c, type: 3}
+  maleGardenAudio: {fileID: 8300000, guid: 24ab813ac8ffdbb4d9c82ebeb6fcf77d, type: 3}
 --- !u!82 &2116464062
 AudioSource:
   m_ObjectHideFlags: 0

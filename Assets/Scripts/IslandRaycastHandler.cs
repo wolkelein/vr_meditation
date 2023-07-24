@@ -6,6 +6,7 @@ public class IslandRaycastHandler: MonoBehaviour
 {
     private GameObject birdflock;
     private GameObject birdflock2;
+    private AudioSource meditationAudioSource;
 
     Ray ray2;
 
@@ -17,21 +18,26 @@ public class IslandRaycastHandler: MonoBehaviour
         birdflock.SetActive(false);
         birdflock2 = GameObject.Find("Birdflock 2");
         birdflock2.SetActive(false);
+        meditationAudioSource = GameObject.Find("Meditation Voice Audio 2").GetComponent<AudioSource>();
     }
 
     IEnumerator FlyBirds()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(2);
+        meditationAudioSource.Pause();
         birdflock.SetActive(true);
         yield return new WaitForSeconds(3);
         focusDetected = false;
+        meditationAudioSource.UnPause();
     }
     IEnumerator FlyBirds2()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(2);
+        meditationAudioSource.Pause();
         birdflock2.SetActive(true);
         yield return new WaitForSeconds(3);
         focusDetected = false;
+        meditationAudioSource.UnPause();
     }
     // Update is called once per frame
     void Update()
@@ -65,7 +71,6 @@ public class IslandRaycastHandler: MonoBehaviour
             // Check the value of sceneString and switch scenes accordingly
             if (sceneString == "focus")
             {
-                
                 Debug.Log("Focus detected");
                 focusDetected = true;
             }
@@ -73,4 +78,3 @@ public class IslandRaycastHandler: MonoBehaviour
         }
     }
 }
-//|| raycastHit2.transform.tag == "tree"

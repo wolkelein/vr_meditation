@@ -35,6 +35,37 @@ public class MeditationMenuHandler : MonoBehaviour
 
     private bool StartMenuActive;
 
+    private void CloseAllSetupMenus()
+    {
+        if (MenuBackgroundImage.activeSelf == true)
+        {
+            MenuBackgroundImage.SetActive(false);
+        }
+        else if (WelcomeText.activeSelf == true)
+        {
+            WelcomeText.SetActive(false);
+        }
+        else if (SetupMenu1.activeSelf == true)
+        {
+            SetupMenu1.SetActive(false);
+        }
+        else if (SetupMenu2.activeSelf == true)
+        {
+            SetupMenu2.SetActive(false);
+        }
+        else if (SetupMenu3.activeSelf == true)
+        {
+            SetupMenu3.SetActive(false);
+        }
+        else if (SetupMenu4.activeSelf == true)
+        {
+            SetupMenu4.SetActive(false);
+        }
+        else if (SetupMenu5.activeSelf == true)
+        {
+            SetupMenu5.SetActive(false);
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -117,13 +148,14 @@ public class MeditationMenuHandler : MonoBehaviour
 
     public void ExitMenu()
     {
-        MenuBackgroundImage.SetActive(false);
+        CloseAllSetupMenus();
+        //MenuBackgroundImage.SetActive(false);
        // WelcomeText.SetActive(false);
         //SetupMenu1.SetActive(false);
         //SetupMenu2.SetActive(false);
         //SetupMenu3.SetActive(false);
         //SetupMenu4.SetActive(false);
-        SetupMenu5.SetActive(false);
+        //SetupMenu5.SetActive(false);
         StartMenuActive = false;
     }
 

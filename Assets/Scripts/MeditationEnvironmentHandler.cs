@@ -20,6 +20,7 @@ public class MeditationEnvironmentHandler : MonoBehaviour
 
     private string scene;
 
+
     private void Start()
     {
         activeScene = menu;
@@ -58,7 +59,7 @@ public class MeditationEnvironmentHandler : MonoBehaviour
             {
                 GameObject.Destroy(activeScene);
                 activeScene = Instantiate(menu, new Vector3(0, 0, 0), Quaternion.identity);
-                MeditationMenu.GetComponent<MeditationMenuHandler>().ChangeToSetupMenu3();
+                MeditationMenu.GetComponent<MeditationMenuHandler>().ActivateSetUpMenu();
                 activeScene.SetActive(false);
             }
         }

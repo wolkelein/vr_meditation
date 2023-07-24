@@ -9,7 +9,9 @@ public class MeditationAudioHandler : MonoBehaviour
     private GameObject meditationAudio;
     private AudioSource meditationAudioSource;
     private GameObject MeditationMenu;
-    
+
+    private GameObject activeScene;
+
 
     private void Start()
     {
@@ -18,6 +20,17 @@ public class MeditationAudioHandler : MonoBehaviour
         MeditationMenu = GameObject.Find("Meditation Menu Handler");
     }
 
+    private void Update()
+    {
+        if(GameObject.Find("OceanScene(clone)")==true)
+        {
+            activeScene = GameObject.Find("OceanScene(clone)");
+        }
+        else if (GameObject.Find("GardenScene(clone)") == true)
+        {
+            activeScene = GameObject.Find("GardenScene(clone)");
+        }
+    }
     public void PlayMeditation(string[] values)
     {
         var sceneString = values[0];
@@ -43,6 +56,7 @@ public class MeditationAudioHandler : MonoBehaviour
             {
                 meditationAudioSource.Stop();
                 MeditationMenu.GetComponent<MeditationMenuHandler>().ActivateSetUpMenu();
+                activeScene.SetActive(false);
             }
         }
     }
