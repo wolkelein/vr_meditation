@@ -5,15 +5,15 @@ using UnityEngine;
 public class HelpHandler : MonoBehaviour
 {
     [SerializeField]
-    private Color activeHelp;
+    private Color activeHelp; //Inspector Field for the color to be used when Help is activated 
 
     [SerializeField]
-    private Color inactiveHelp;
+    private Color inactiveHelp; //Inspector Field for the color to be used when Help is deactivated - standard color
 
     [SerializeField]
-    private GameObject HelpMark;
+    private GameObject HelpMark; //Inspector Field for a reference to the GameObject that holds the 3 dimensional Questionmark
 
-    private GameObject MeditationMenu;
+    private GameObject MeditationMenu; //GameObject for Meditation Menu Handler
 
     private void Start()
     {
@@ -28,11 +28,11 @@ public class HelpHandler : MonoBehaviour
 
         //Debug.DrawRay(origin, direction * 100f, Color.red);
         Ray ray = new Ray(origin, direction);
-        if(MeditationMenu.GetComponent<MeditationMenuHandler>().IsStartMenuActive() == true)
+        if(MeditationMenu.GetComponent<MeditationMenuHandler>().IsStartMenuActive() == true) //to avoid going into the Help Menu while the SetupMenu is still active
         {}
         else if (MeditationMenu.GetComponent<MeditationMenuHandler>().IsStartMenuActive() == false)
         {
-            if (Physics.Raycast(ray, out RaycastHit raycastHit) && raycastHit.transform.tag == "help")
+            if (Physics.Raycast(ray, out RaycastHit raycastHit) && raycastHit.transform.tag == "help") //set the color when Raycast hits the HelpMark GameObject
             {
                 HelpMark.GetComponent<Renderer>().material.color = activeHelp;
                 MeditationMenu.GetComponent<MeditationMenuHandler>().ActivateHelpMenu();
@@ -44,6 +44,11 @@ public class HelpHandler : MonoBehaviour
         }
         
     }
+
+    /// <summary>
+    /// This function is used to navigate through the Help Menu depending on the string[] values, as well as exit the Help Menu.
+    /// </summary>
+    /// <param name="values">String values that are returned from Wit.ai</param>
     public void ChooseHelpMenu(string[] values)
     {
         var sceneString = values[0];

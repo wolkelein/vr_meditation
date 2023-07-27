@@ -6,15 +6,15 @@ using Meta.WitAi;
 public class BackgroundMusicHandler : MonoBehaviour
 {
     [SerializeField]
-    private AudioClip backgroundMusic1;
+    private AudioClip backgroundMusic1; //Inspector Field for Backgroundmusic Track 1
 
     [SerializeField]
-    private AudioClip backgroundMusic2;
+    private AudioClip backgroundMusic2; //Inspector Field for Backgroundmusic Track 2
 
-    private GameObject backgroundMusic;
-    private AudioSource backgroundAudioSource;
+    private GameObject backgroundMusic; //GameObject for Background Audio
+    private AudioSource backgroundAudioSource; //AudioSource of backgroundMusic GameObject
 
-    private GameObject MeditationMenu;
+    private GameObject MeditationMenu; //GameObject for Meditation Menu Handler
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +24,10 @@ public class BackgroundMusicHandler : MonoBehaviour
         MeditationMenu = GameObject.Find("Meditation Menu Handler");
     }
 
+    /// <summary>
+    /// BackgroundMusicTrial() plays a short excerpt (3 seconds) from the current backgroundAudioSource (either Track 1 or Track 2). 
+    /// </summary>
+    /// <returns></returns>
     IEnumerator BackgroundMusicTrial()
     {
         backgroundAudioSource.Play();
@@ -31,6 +35,12 @@ public class BackgroundMusicHandler : MonoBehaviour
         backgroundAudioSource.Stop();
     }
 
+    /// <summary>
+    /// This function sets the backgroundAudioSource Clip to a value depending on the string[] values. For values "Try ..." a track,
+    /// the Coroutine BackgroundMusicTrial() executes. For valeus "Set ..." a track, the backgroundAudioSource Clip starts playing in a loop
+    /// and the function ChangeToSetupMenu2() from the MeditationMenuHandler component is called.
+    /// </summary>
+    /// <param name="values">String values that are returned from Wit.ai</param>
     public void UpdateBackgroundAudio(string[] values)
     {
         var sceneString = values[0];

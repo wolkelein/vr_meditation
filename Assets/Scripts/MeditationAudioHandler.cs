@@ -31,6 +31,14 @@ public class MeditationAudioHandler : MonoBehaviour
             activeScene = GameObject.Find("GardenScene(clone)");
         }
     }
+
+    /// <summary>
+    /// This function plays, pauses, continues or stops the meditationAudioSource depending on the string[] values.
+    /// If string[] values is start, it also calls the ExitMenu() function of the MeditationMenuHandler and if it is
+    /// stop, it calls the ActivateSetUpMenu() function of the MeditationMenuHandler and deactivates the current 
+    /// meditation scene.
+    /// </summary>
+    /// <param name="values">String values that are returned from Wit.ai</param>
     public void PlayMeditation(string[] values)
     {
         var sceneString = values[0];

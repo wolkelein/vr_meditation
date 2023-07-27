@@ -6,6 +6,9 @@ using Meta.WitAi;
 
 public class MeditationVoiceHandler : MonoBehaviour
 {
+    /// <summary>
+    /// Inspector Fields for the Audio Clips for the Meditation Audio (female and male for each scene seperately)
+    /// </summary>
     [SerializeField]
     private AudioClip femaleOceanAudio;
 
@@ -18,11 +21,11 @@ public class MeditationVoiceHandler : MonoBehaviour
     [SerializeField]
     private AudioClip maleGardenAudio;
 
-    private AudioSource meditationAudioSource;
+    private AudioSource meditationAudioSource; //AudioSource of Meditation Voice Audio 2 GameObject
 
-    private GameObject MeditationMenu;
+    private GameObject MeditationMenu; //GameObject for Meditation Menu Handler
 
-    private GameObject activeScene;
+    private GameObject activeScene; //GameObject to hold the current scene
 
     private void Start()
     {
@@ -35,6 +38,13 @@ public class MeditationVoiceHandler : MonoBehaviour
     {
         activeScene.GetComponent<MeditationEnvironmentHandler>().ShowActiveScene();
     }
+
+    /// <summary>
+    /// Sets the meditationAudioSource Clip depending on the string[] values and the activeScene (this is found through the 
+    /// ShowActiveScene() function of the MeditationEnvironmentHandler. Calls the ChangeToSetupMenu4() function of the 
+    /// MeditationMenuHandler.
+    /// </summary>
+    /// <param name="values">String values that are returned from Wit.ai</param>
     public void SetMeditationVoice(string[] values)
     {
         var sceneString = values[0];
@@ -55,7 +65,7 @@ public class MeditationVoiceHandler : MonoBehaviour
                 }
                 else
                 {
-                    Debug.LogWarning("Scene name not recognized.");
+
                 }
                 MeditationMenu.GetComponent<MeditationMenuHandler>().ChangeToSetupMenu4();
             }
@@ -71,7 +81,7 @@ public class MeditationVoiceHandler : MonoBehaviour
                 }
                 else
                 {
-                    Debug.LogWarning("Scene name not recognized.");
+
                 }
                 MeditationMenu.GetComponent<MeditationMenuHandler>().ChangeToSetupMenu4();
             }

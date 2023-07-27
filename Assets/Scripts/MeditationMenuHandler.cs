@@ -5,6 +5,9 @@ using Google.XR;
 
 public class MeditationMenuHandler : MonoBehaviour
 {
+    /// <summary>
+    /// Inspector Fields for references to the SetupMenu GameObjects.
+    /// </summary>
     [SerializeField]
     private GameObject MenuBackgroundImage;
     [SerializeField]
@@ -20,6 +23,9 @@ public class MeditationMenuHandler : MonoBehaviour
     [SerializeField]
     private GameObject SetupMenu5;
 
+    /// <summary>
+    /// Inspector Fields for references to the HelpMenu GameObjects.
+    /// </summary>
     [SerializeField]
     private GameObject HelpMenuBackgroundImage;
     [SerializeField]
@@ -35,6 +41,9 @@ public class MeditationMenuHandler : MonoBehaviour
 
     private bool StartMenuActive;
 
+    /// <summary>
+    /// Checks if any SetupMenu GameObjects are active and deactivates them.
+    /// </summary>
     public void CloseAllSetupMenus()
     {
         if (MenuBackgroundImage.activeSelf == true)
@@ -85,7 +94,10 @@ public class MeditationMenuHandler : MonoBehaviour
         StartMenuActive = true;
     }
 
-   public void ActivateSetUpMenu()
+    /// <summary>
+    /// Reopens the SetupMenu.
+    /// </summary>
+    public void ActivateSetUpMenu()
     {
         WelcomeText.SetActive(true);
         SetupMenu1.SetActive(true);
@@ -109,7 +121,11 @@ public class MeditationMenuHandler : MonoBehaviour
             SetupMenu5.SetActive(false);
         }
     }
-   public void ChangeToSetupMenu2()
+
+    /// <summary>
+    /// Changes to the second GameObject of the Setup Menu.
+    /// </summary>
+    public void ChangeToSetupMenu2()
     {
         if (HelpMenuActive == false)
         {
@@ -119,6 +135,9 @@ public class MeditationMenuHandler : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Changes to the third GameObject of the Setup Menu.
+    /// </summary>
     public void ChangeToSetupMenu3()
     {
         if(HelpMenuActive == false)
@@ -128,6 +147,9 @@ public class MeditationMenuHandler : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Changes to the fourth GameObject of the Setup Menu.
+    /// </summary>
     public void ChangeToSetupMenu4()
     {
         if (HelpMenuActive == false)
@@ -137,6 +159,9 @@ public class MeditationMenuHandler : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Changes to the fifth GameObject of the Setup Menu.
+    /// </summary>
     public void ChangeToSetupMenu5()
     {
         if(HelpMenuActive == false)
@@ -146,19 +171,19 @@ public class MeditationMenuHandler : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Exits Setup Menu.
+    /// </summary>
     public void ExitMenu()
     {
         CloseAllSetupMenus();
-        //MenuBackgroundImage.SetActive(false);
-       // WelcomeText.SetActive(false);
-        //SetupMenu1.SetActive(false);
-        //SetupMenu2.SetActive(false);
-        //SetupMenu3.SetActive(false);
-        //SetupMenu4.SetActive(false);
         SetupMenu5.SetActive(false);
         StartMenuActive = false;
     }
 
+    /// <summary>
+    /// Opens the HelpMenu.
+    /// </summary>
     public void ActivateHelpMenu()
     {
         HelpMenuBackgroundImage.SetActive(true);
@@ -166,23 +191,36 @@ public class MeditationMenuHandler : MonoBehaviour
         HelpMenuActive = true;
     }
 
+    /// <summary>
+    /// Opens the HelpMenu 2.
+    /// </summary>
     public void HelpMenuMeditationSwitch()
     {
         HelpMenu1.SetActive(false);
         HelpMenu2.SetActive(true);
     }
 
+    /// <summary>
+    /// Opens the HelpMenu3 .
+    /// </summary>
     public void HelpMenuVoiceSwitch()
     {
         HelpMenu1.SetActive(false);
         HelpMenu3.SetActive(true);
     }
 
+    /// <summary>
+    /// Opens the HelpMenu 4.
+    /// </summary>
     public void HelpMenuSkySwitch()
     {
         HelpMenu1.SetActive(false);
         HelpMenu4.SetActive(true);
     }
+
+    /// <summary>
+    /// Exits Help Menu.
+    /// </summary>
     public void ExitHelpMenu()
     {
         if (HelpMenu1.activeSelf == true)
@@ -205,11 +243,19 @@ public class MeditationMenuHandler : MonoBehaviour
         HelpMenuBackgroundImage.SetActive(false);
     }
 
+    /// <summary>
+    /// Shows whether the Help Menu is active.
+    /// </summary>
+    /// <returns>bool HelpMenuActive</returns>
     public bool IsHelpMenuActive()
     {
         return HelpMenuActive;
     }
 
+    /// <summary>
+    /// Shows whether the Setup Menu is active.
+    /// </summary>
+    /// <returns>bool StartMenuActive</returns>
     public bool IsStartMenuActive()
     {
         return StartMenuActive;

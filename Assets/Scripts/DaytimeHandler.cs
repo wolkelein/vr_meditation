@@ -6,19 +6,23 @@ using Meta.WitAi;
 public class DaytimeHandler : MonoBehaviour
 {
     [SerializeField]
-    Material day;
+    Material day;  //Inspector Field for Skybox Material for a day meditation
 
     [SerializeField]
-    Material night;
+    Material night; //Inspector Field for Skybox Material for a night meditation
 
-    private GameObject MeditationMenu;
+    private GameObject MeditationMenu; //GameObject for Meditation Menu Handler
 
     // Start is called before the first frame update
     void Start()
     {
         MeditationMenu = GameObject.Find("Meditation Menu Handler");
     }
- 
+
+    /// <summary>
+    /// This function sets the Skybox depending on the string[] values and calls the function ChangeToSetupMenu5() from the MeditationMenuHandler component.
+    /// </summary>
+    /// <param name="values">String values that are returned from Wit.ai</param>
     public void ChooseDaytime(string[] values)
     {
         var daytimeString = values[0];

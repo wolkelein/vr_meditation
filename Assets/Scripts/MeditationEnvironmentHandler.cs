@@ -6,17 +6,17 @@ using Meta.WitAi;
 public class MeditationEnvironmentHandler : MonoBehaviour
 {
     [SerializeField]
-    private GameObject seaMeditation;
+    private GameObject seaMeditation; //Inspector Field for reference to sea meditation environment prefab
 
     [SerializeField]
-    private GameObject gardenMeditation;
+    private GameObject gardenMeditation; //Inspector Field for reference to garden meditation environment prefab
 
     [SerializeField]
-    private GameObject menu;
+    private GameObject menu; //Inspector Field for reference to menu environment prefab
 
-    private GameObject activeScene;
+    private GameObject activeScene; //GameObject to hold the current scene
 
-    private GameObject MeditationMenu;
+    private GameObject MeditationMenu; //GameObject for Meditation Menu Handler
 
     private string scene;
 
@@ -30,9 +30,9 @@ public class MeditationEnvironmentHandler : MonoBehaviour
     /// <summary>
     /// Checks wether the string that is captured through the microphone corresponds to sea, garden or menu and their
     /// synonyms. Destroys the active scene as soon as a different scene is chosen and sets the scene to the game object
-    /// that was set in the Inspector, as well as the audio clipt that was set in the Inspector.
+    /// that was set in the Inspector, as well as the audio clip that was set in the Inspector.
     /// </summary>
-    /// <param name="values"></param>
+    /// <param name="values"> String values that are returned from Wit.ai</param>
     public void UpdateMeditationScene(string[] values)
     {
         var sceneString = values[0];
@@ -64,11 +64,19 @@ public class MeditationEnvironmentHandler : MonoBehaviour
             }
         }
     }
+
+    /// <summary>
+    /// Stores the activeScene.name in a string.
+    /// </summary>
+    /// <returns>string name of the currently active scene</returns>
     public string ShowActiveScene()
     {
        return scene = activeScene.name;
     }
 
+    /// <summary>
+    /// Activates the scene that should currently be active.
+    /// </summary>
     public void ActivateScene()
     {
         activeScene.SetActive(true);
